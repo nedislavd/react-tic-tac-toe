@@ -1,3 +1,22 @@
+# React Tic-Tac-Toe Game
+![Game Screenshot](./src/public/demo.png)
+
+# Requirements
+
+* The game is to be played between two humans on the same machine.
+* Whomever clicks first will be &quot;X&quot;. The next click will be &quot;O&quot;, and so on.
+* The game follows standard tic-tac-toe rules:
+* The game board is a 3x3 grid of squares.
+
+* The game starts with one of the players and the game ends when one of the players
+has one whole row/ column/ diagonal filled with his/her respective character (‘O’ or
+‘X’).
+* If no one wins, then the game is said to be draw.
+* When a player wins or a draw is established, show the game status on screen with a &quot;reset&quot;
+button that clears the board and lets the players start again.
+* It doesn&#39;t need to be pretty, but if there&#39;s time to spare, keep reading ...
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
