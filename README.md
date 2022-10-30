@@ -1,5 +1,5 @@
 # React Tic-Tac-Toe Game
-![Game Screenshot](./src/public/demo.png)
+![Game Screenshot](./public/demo.png)
 
 # Requirements
 
