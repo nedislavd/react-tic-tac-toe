@@ -1,26 +1,35 @@
-import { React } from "react";
 import { Square } from "../Square";
 import { colors } from "../../utils/colors";
 
 const boardStyle = {
-  border: `6px solid ${colors.orange}`,
-  borderRadius: "10px",
+  border: `4px solid ${colors.orange}`,
+  borderRadius: "8px",
   backgroundImage: "url('/blackboard.jpg')",
   backgroundSize: "cover",
-  width: 300,
-  height: 300,
-  display: "grid",
-  gridTemplate: "repeat(3, 1fr) / repeat(3, 1fr)",
   margin: "40px auto",
+  alignContent: "flex-start",
+  display: "flex",
+  flexFlow: "row wrap",
 };
 
 const Board = (props) => {
-  const { squares, onClick } = props;
+  const { squares, onClick, winner } = props;
+  const boardWidth = {
+    width: `${Math.sqrt(squares.length) * 75}px`,
+  };
   return (
-    <section style={boardStyle}>
-      {squares.map((square, i) => (
-        <Square key={i} value={square} onClick={() => onClick(i)} />
-      ))}
+    <section style={{ ...boardStyle, ...boardWidth }}>
+      {squares.map((square, i) => {
+        const highlight = winner && winner.includes(i);
+        return (
+          <Square
+            key={i}
+            value={square}
+            highlight={highlight}
+            onClick={() => onClick(i)}
+          />
+        );
+      })}
     </section>
   );
 };

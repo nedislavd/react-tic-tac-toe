@@ -1,8 +1,12 @@
-import "./App.css";
 import { Game } from "./components/Game";
-
 function App() {
-  return <Game />;
+  return (
+    <>
+      <div style={{ margin: "0 auto" }}>
+        <Game />
+      </div>
+    </>
+  );
 }
 
 export default App;
